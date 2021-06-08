@@ -1,10 +1,10 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from "react";
+import PropTypes from "prop-types";
 
-import Icon from '../../atoms/Icon'
+import Icon from "../../atoms/Icon";
 
-import styles from './Dropdown.module.css'
-import withStyles from '../../hocs/withStyles'
+import styles from "./Dropdown.module.css";
+import withStyles from "../../hocs/withStyles";
 
 export const Dropdown = ({
   getStyles,
@@ -16,13 +16,13 @@ export const Dropdown = ({
 }) => (
   <div
     id={id}
-    className={getStyles('dropdown', {
-      'is-inline': isInline,
+    className={getStyles("dropdown", {
+      "is-inline": isInline,
     })}
   >
     <Icon className="dropdown-icon" name="angleDown" background="highlight" />
     <select
-      className={getStyles('dropdown-select')}
+      className={getStyles("dropdown-select")}
       onChange={(event) => onChange(event?.currentTarget?.value)}
       value={value}
     >
@@ -33,7 +33,7 @@ export const Dropdown = ({
       ))}
     </select>
   </div>
-)
+);
 
 Dropdown.propTypes = {
   onChange: PropTypes.func.isRequired,
@@ -47,13 +47,13 @@ Dropdown.propTypes = {
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   id: PropTypes.string,
   isInline: PropTypes.bool,
-}
+};
 
 Dropdown.defaultProps = {
-  value: '',
+  value: "",
   isInline: false,
   onChange: () => {},
   getStyles: () => {},
-}
+};
 
-export default withStyles(styles)(Dropdown)
+export default withStyles(styles)(Dropdown);

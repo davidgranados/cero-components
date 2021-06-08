@@ -133,9 +133,9 @@
   --media-query-max-width-lg: 1199px;
 
   --font-family-sans: Quicksand, Arial, sans-serif;
-  --font-family-mono: 'Roboto Mono', 'Courier New', monospace;
+  --font-family-mono: "Roboto Mono", "Courier New", monospace;
 
-  --font-size-base: 10px;
+  --font-size-base: 62.5%;
   --font-size-xs: 1.1rem;
   --font-size-sm: 1.3rem;
   --font-size-md: 1.5rem;

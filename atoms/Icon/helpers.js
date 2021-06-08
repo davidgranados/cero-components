@@ -4,6 +4,6 @@ const iconSize = {
   md: 35,
   lg: 50,
   xl: 70,
-}
+};
 
-export const mapSize = (size) => iconSize[size]
+export const mapSize = (size) => iconSize[size];

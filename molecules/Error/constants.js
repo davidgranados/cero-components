@@ -1,1 +1,1 @@
-export const options = { types: [] }
+export const options = { types: [] };

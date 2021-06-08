@@ -1,2 +1,2 @@
-export { default, Loading } from './Loading'
-export { default as styles } from './Loading.module.css'
+export { default, Loading } from "./Loading";
+export { default as styles } from "./Loading.module.css";

@@ -1,1 +1,1 @@
-export { default, LoadingError } from './LoadingError'
+export { default, LoadingError } from "./LoadingError";

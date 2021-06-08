@@ -1,9 +1,9 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from "react";
+import PropTypes from "prop-types";
 
-import styles from './Paragraph.module.css'
-import { options } from './constants'
-import withStyles from '../../hocs/withStyles'
+import styles from "./Paragraph.module.css";
+import { options } from "./constants";
+import withStyles from "../../hocs/withStyles";
 
 export const Paragraph = ({
   getStyles,
@@ -16,18 +16,18 @@ export const Paragraph = ({
     <div
       className={getStyles(
         className,
-        'paragraph',
-        ['color', 'size', 'weight'],
+        "paragraph",
+        ["color", "size", "weight"],
         {
-          'is-striked': isStriked,
-          'is-inline': isInline,
+          "is-striked": isStriked,
+          "is-inline": isInline,
         }
       )}
     >
       {children}
     </div>
-  )
-}
+  );
+};
 
 Paragraph.propTypes = {
   children: PropTypes.node.isRequired,
@@ -38,13 +38,13 @@ Paragraph.propTypes = {
   className: PropTypes.string,
   isStriked: PropTypes.bool,
   isInline: PropTypes.bool,
-}
+};
 
 Paragraph.defaultProps = {
-  color: 'base',
-  size: 'md',
-  weight: 'normal',
+  color: "base",
+  size: "md",
+  weight: "normal",
   getStyles: () => {},
-}
+};
 
-export default withStyles(styles)(Paragraph)
+export default withStyles(styles)(Paragraph);

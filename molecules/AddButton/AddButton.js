@@ -1,21 +1,21 @@
-import React, { useState, useRef } from 'react'
-import PropTypes from 'prop-types'
+import React, { useState, useRef } from "react";
+import PropTypes from "prop-types";
 
-import Paragraph from '../../atoms/Paragraph'
-import Icon from '../../atoms/Icon'
-import Spacer from '../../layout/Spacer'
+import Paragraph from "../../atoms/Paragraph";
+import Icon from "../../atoms/Icon";
+import Spacer from "../../layout/Spacer";
 
-import styles from './AddButton.module.css'
-import { options } from './constants'
+import styles from "./AddButton.module.css";
+import { options } from "./constants";
 import {
   handleClick,
   handleChange,
   handleKeyDown,
   handleBlur,
   handleFocus,
-} from './handlers'
-import { shouldShowHelpText } from './helpers'
-import withStyles from '../../hocs/withStyles'
+} from "./handlers";
+import { shouldShowHelpText } from "./helpers";
+import withStyles from "../../hocs/withStyles";
 
 export const AddButton = ({
   getStyles,
@@ -28,21 +28,21 @@ export const AddButton = ({
   defaultIsEditable,
   defaultValue,
 }) => {
-  const [isEditable, setIsEditable] = useState(defaultIsEditable)
-  const [inputValue, setInputValue] = useState(defaultValue)
-  const [isFocused, setIsFocused] = useState(false)
-  const inputRef = useRef(null)
+  const [isEditable, setIsEditable] = useState(defaultIsEditable);
+  const [inputValue, setInputValue] = useState(defaultValue);
+  const [isFocused, setIsFocused] = useState(false);
+  const inputRef = useRef(null);
 
   return (
     <div
-      className={getStyles('add-button', ['type'], {
-        'is-editable': isEditable,
-        'is-focused': isFocused,
+      className={getStyles("add-button", ["type"], {
+        "is-editable": isEditable,
+        "is-focused": isFocused,
       })}
       onClick={handleClick({ setIsEditable, inputRef })}
     >
       {isEditable ? (
-        <div className={getStyles('edit-container')}>
+        <div className={getStyles("edit-container")}>
           <input
             ref={inputRef}
             type="text"
@@ -68,7 +68,7 @@ export const AddButton = ({
               <Paragraph
                 size="sm"
                 className="help-text"
-                color={isFocused ? 'muted' : 'inverted'}
+                color={isFocused ? "muted" : "inverted"}
               >
                 {isFocused ? focusHelpText : blurHelpText}
               </Paragraph>
@@ -80,16 +80,16 @@ export const AddButton = ({
         <>
           <Icon
             name={icon}
-            color={type === 'primary' ? 'base' : 'highlight'}
-            background={type === 'primary' ? 'highlight' : undefined}
+            color={type === "primary" ? "base" : "highlight"}
+            background={type === "primary" ? "highlight" : undefined}
           />
           <Spacer.Vertical size="sm" />
           <Paragraph weight="medium">{children}</Paragraph>
         </>
       )}
     </div>
-  )
-}
+  );
+};
 
 AddButton.propTypes = {
   children: PropTypes.node.isRequired,
@@ -101,15 +101,15 @@ AddButton.propTypes = {
   blurHelpText: PropTypes.string,
   defaultIsEditable: PropTypes.bool,
   defaultValue: PropTypes.string,
-}
+};
 
 AddButton.defaultProps = {
-  type: 'primary',
-  icon: 'plusCircle',
+  type: "primary",
+  icon: "plusCircle",
   defaultIsEditable: false,
-  defaultValue: '',
+  defaultValue: "",
   onAdd: () => {},
   getStyles: () => {},
-}
+};
 
-export default withStyles(styles)(AddButton)
+export default withStyles(styles)(AddButton);

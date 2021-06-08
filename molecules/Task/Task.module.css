@@ -24,7 +24,7 @@
   left: 0;
   border-radius: var(--task-border-radius);
   box-shadow: var(--box-shadow-sm), inset 0 -3px 0 var(--color-green-300);
-  content: '';
+  content: "";
   pointer-events: none;
 }
 
@@ -36,6 +36,6 @@
   left: 0;
   border-radius: var(--task-border-radius);
   box-shadow: var(--box-shadow-sm), inset 0 -3px 0 var(--color-yellow-400);
-  content: '';
+  content: "";
   pointer-events: none;
 }
