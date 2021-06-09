@@ -22,7 +22,7 @@ exports[`Storyshots Tokens/FontSize Default 1`] = `
       className="font-size"
       style={
         Object {
-          "fontSize": "10px",
+          "fontSize": "62.5%",
         }
       }
     >
@@ -39,7 +39,7 @@ exports[`Storyshots Tokens/FontSize Default 1`] = `
       <span
         className="label"
       >
-        10px
+        62.5%
       </span>
     </div>
   </div>
@@ -68,7 +68,7 @@ exports[`Storyshots Tokens/FontSize Sizes 1`] = `
       className="font-size"
       style={
         Object {
-          "fontSize": "10px",
+          "fontSize": "62.5%",
         }
       }
     >
@@ -85,7 +85,7 @@ exports[`Storyshots Tokens/FontSize Sizes 1`] = `
       <span
         className="label"
       >
-        10px
+        62.5%
       </span>
     </div>
   </div>
