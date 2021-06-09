@@ -21,7 +21,7 @@ export const Input = ({
     value={value}
     placeholder={placeholder}
     onChange={onChange}
-  ></input>
+  />
 );
 
 Input.propTypes = {
