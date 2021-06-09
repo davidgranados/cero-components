@@ -32,7 +32,7 @@ These are the necessary steps to start using `Cero Components` as a dependency f
 1. Installation
 
 ```bash
-  npm install @glrodasz/components
+  npm install @davidgranados/components
 ```
 
 2. Use the components.
@@ -40,7 +40,7 @@ These are the necessary steps to start using `Cero Components` as a dependency f
 - Import component
 
 ```jsx
-import { Icon, ButtonIcon } from '@glrodasz/components'
+import { Icon, ButtonIcon } from '@davidgranados/components'
 ```
 
 - Use component
