@@ -1,15 +1,15 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from "react";
+import PropTypes from "prop-types";
 
-import styles from './Modal.module.css'
-import { options } from './constants'
-import withStyles from '../../hocs/withStyles'
-import Icon from '../../atoms/Icon'
-import Container from '../../layout/Container'
+import styles from "./Modal.module.css";
+import { options } from "./constants";
+import withStyles from "../../hocs/withStyles";
+import Icon from "../../atoms/Icon";
+import Container from "../../layout/Container";
 
 const handleClose = ({ onClose }) => () => {
-  onClose()
-}
+  onClose();
+};
 
 // TODO: Define if this is an Atom or a Molecule. Review if
 // there are more Atoms with a Layout component and decide
@@ -19,8 +19,8 @@ const handleClose = ({ onClose }) => () => {
 export const Modal = ({ onClose, children, getStyles, isPlayground }) => {
   return (
     <div
-      className={getStyles('modal', ['type'], {
-        'is-playground': isPlayground,
+      className={getStyles("modal", ["type"], {
+        "is-playground": isPlayground,
       })}
     >
       {!!onClose && (
@@ -33,8 +33,8 @@ export const Modal = ({ onClose, children, getStyles, isPlayground }) => {
       )}
       <Container>{children}</Container>
     </div>
-  )
-}
+  );
+};
 
 Modal.propTypes = {
   children: PropTypes.node.isRequired,
@@ -42,11 +42,11 @@ Modal.propTypes = {
   onClose: PropTypes.func,
   type: PropTypes.oneOf(options.types),
   isPlayground: PropTypes.bool,
-}
+};
 
 Modal.defaultProps = {
   getStyles: () => {},
-  type: 'primary',
-}
+  type: "primary",
+};
 
-export default withStyles(styles)(Modal)
+export default withStyles(styles)(Modal);

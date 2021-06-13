@@ -1,17 +1,17 @@
-import { Modal, styles, options } from '.'
+import { Modal, styles, options } from ".";
 
 import {
   getTemplate,
   getListTemplate,
   getOptionsArgTypes,
-} from '../../helpers/storybook'
+} from "../../helpers/storybook";
 
-const Template = getTemplate(Modal, styles)
-const ListTemplate = getListTemplate(Modal, styles)
+const Template = getTemplate(Modal, styles);
+const ListTemplate = getListTemplate(Modal, styles);
 
 // FIXME: Make onClose an storybook action
 export default {
-  title: 'Molecules/Modal',
+  title: "Molecules/Modal",
   component: Modal,
   args: {
     isPlayground: true,
@@ -21,15 +21,15 @@ export default {
   },
   argTypes: {
     types: getOptionsArgTypes(options.types),
-    onClose: { action: 'clicked' },
+    onClose: { action: "clicked" },
   },
-  parameters: { __sb: { fd: 'row' } },
-}
+  parameters: { __sb: { fd: "row" } },
+};
 
-export const Default = Template.bind({})
+export const Default = Template.bind({});
 
-export const Closable = Template.bind({})
-Closable.args = { onClose: () => {} }
+export const Closable = Template.bind({});
+Closable.args = { onClose: () => {} };
 
-export const Types = ListTemplate.bind({})
-Types.args = { items: options.types.map((type) => ({ type })) }
+export const Types = ListTemplate.bind({});
+Types.args = { items: options.types.map((type) => ({ type })) };

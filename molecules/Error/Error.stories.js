@@ -1,11 +1,11 @@
-import { Error, styles, options } from '.'
+import { Error, styles, options } from ".";
 
-import { getTemplate, getOptionsArgTypes } from '../../helpers/storybook'
+import { getTemplate, getOptionsArgTypes } from "../../helpers/storybook";
 
-const Template = getTemplate(Error, styles)
+const Template = getTemplate(Error, styles);
 
 export default {
-  title: 'Molecules/Error',
+  title: "Molecules/Error",
   component: Error,
   args: {
     children:
@@ -14,8 +14,8 @@ export default {
   argTypes: {
     types: getOptionsArgTypes(options.types),
   },
-}
+};
 
-export const Default = Template.bind({})
-export const Title = Template.bind({})
-Title.args = { title: 'Lindir glowers saw 111th utter.' }
+export const Default = Template.bind({});
+export const Title = Template.bind({});
+Title.args = { title: "Lindir glowers saw 111th utter." };

@@ -3,4 +3,4 @@ export const shouldShowHelpText = ({
   inputValue,
   focusHelpText,
   blurHelpText,
-}) => isEditable && inputValue && (focusHelpText || blurHelpText)
+}) => isEditable && inputValue && (focusHelpText || blurHelpText);

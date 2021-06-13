@@ -2,23 +2,23 @@
 // https://github.com/storybookjs/storybook/issues/6055#issuecomment-521046352
 const cssModules = () => async (config) => {
   config.module.rules.find(
-    (rule) => rule.test.toString() === '/\\.css$/'
-  ).exclude = /\.module\.css$/
+    (rule) => rule.test.toString() === "/\\.css$/"
+  ).exclude = /\.module\.css$/;
 
   config.module.rules.push({
     test: /\.module\.css$/,
     use: [
-      'style-loader',
+      "style-loader",
       {
-        loader: 'css-loader',
+        loader: "css-loader",
         options: {
           modules: true,
         },
       },
     ],
-  })
+  });
 
-  return config
-}
+  return config;
+};
 
-module.exports = cssModules
+module.exports = cssModules;

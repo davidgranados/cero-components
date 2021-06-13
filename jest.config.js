@@ -1,13 +1,13 @@
 module.exports = {
-  moduleNameMapper: { '\\.css$': 'identity-obj-proxy' },
-  setupFilesAfterEnv: ['./jest.setup.js'],
+  moduleNameMapper: { "\\.css$": "identity-obj-proxy" },
+  setupFilesAfterEnv: ["./jest.setup.js"],
   transform: {
-    '^.+\\.stories\\.jsx?$': '@storybook/addon-storyshots/injectFileName',
-    '^.+\\.jsx?$': 'babel-jest',
+    "^.+\\.stories\\.jsx?$": "@storybook/addon-storyshots/injectFileName",
+    "^.+\\.jsx?$": "babel-jest",
   },
   collectCoverageFrom: [
-    '{atoms,molecules,layout}/**/!(index).js',
-    '{hocs,helpers,scripts}/*.js',
+    "{atoms,molecules,layout}/**/!(index).js",
+    "{hocs,helpers,scripts}/*.js",
   ],
   coverageThreshold: {
     global: {
@@ -17,4 +17,4 @@ module.exports = {
       functions: 60,
     },
   },
-}
+};

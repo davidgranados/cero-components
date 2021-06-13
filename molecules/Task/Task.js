@@ -1,22 +1,22 @@
-import React, { useState } from 'react'
-import PropTypes from 'prop-types'
+import React, { useState } from "react";
+import PropTypes from "prop-types";
 
-import Spacer from '../../layout/Spacer'
-import Card from '../../atoms/Card'
-import Paragraph from '../../atoms/Paragraph'
-import Icon from '../../atoms/Icon'
-import Check from '../../atoms/Check'
+import Spacer from "../../layout/Spacer";
+import Card from "../../atoms/Card";
+import Paragraph from "../../atoms/Paragraph";
+import Icon from "../../atoms/Icon";
+import Check from "../../atoms/Check";
 
-import styles from './Task.module.css'
-import { options } from './constants'
-import withStyles from '../../hocs/withStyles'
+import styles from "./Task.module.css";
+import { options } from "./constants";
+import withStyles from "../../hocs/withStyles";
 
 const handleCheck = ({ isChecked, setIsChecked, isPending, onCheck }) => () => {
   if (!isPending) {
-    setIsChecked(!isChecked)
-    onCheck(!isChecked)
+    setIsChecked(!isChecked);
+    onCheck(!isChecked);
   }
-}
+};
 
 export const Task = ({
   children,
@@ -26,21 +26,21 @@ export const Task = ({
   getStyles,
   isPending,
 }) => {
-  const [isChecked, setIsChecked] = useState(defaultIsChecked && !isPending)
+  const [isChecked, setIsChecked] = useState(defaultIsChecked && !isPending);
 
   return (
-    <div className={getStyles('container')}>
+    <div className={getStyles("container")}>
       <Card
         onClick={handleCheck({ isChecked, setIsChecked, isPending, onCheck })}
         isClickable={!isPending}
         isDraggable={isPending}
       >
         <div
-          className={getStyles('task', ['type'], {
-            'is-checked': isChecked,
+          className={getStyles("task", ["type"], {
+            "is-checked": isChecked,
           })}
         >
-          <div className={getStyles('content')}>
+          <div className={getStyles("content")}>
             {isPending ? (
               <Icon name="grip" size="sm" />
             ) : (
@@ -48,7 +48,7 @@ export const Task = ({
             )}
             <Spacer.Vertical size="xs" />
             <Paragraph
-              color={isChecked ? 'muted' : 'base'}
+              color={isChecked ? "muted" : "base"}
               weight="medium"
               isStriked={isChecked}
             >
@@ -67,8 +67,8 @@ export const Task = ({
         </div>
       </Card>
     </div>
-  )
-}
+  );
+};
 
 Task.propTypes = {
   children: PropTypes.node.isRequired,
@@ -78,13 +78,13 @@ Task.propTypes = {
   type: PropTypes.oneOf(options.types),
   defaultIsChecked: PropTypes.bool,
   isPending: PropTypes.bool,
-}
+};
 
 Task.defaultProps = {
   getStyles: () => {},
   onCheck: () => {},
   onDelete: () => {},
   defaultIsChecked: false,
-}
+};
 
-export default withStyles(styles)(Task)
+export default withStyles(styles)(Task);

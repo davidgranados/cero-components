@@ -1,11 +1,11 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from "react";
+import PropTypes from "prop-types";
 
-import Heading from '../Heading'
+import Heading from "../Heading";
 
-import styles from './Button.module.css'
-import { options } from './constants'
-import withStyles from '../../hocs/withStyles'
+import styles from "./Button.module.css";
+import { options } from "./constants";
+import withStyles from "../../hocs/withStyles";
 
 export const Button = ({
   type,
@@ -17,19 +17,19 @@ export const Button = ({
   getStyles,
 }) => (
   <button
-    className={getStyles('button', ['type'], {
-      'is-inline': isInline || type === 'tertiary',
-      'is-muted': isMuted && type === 'primary',
+    className={getStyles("button", ["type"], {
+      "is-inline": isInline || type === "tertiary",
+      "is-muted": isMuted && type === "primary",
     })}
     onClick={onClick}
   >
     {addons && addons.prepend}
-    <Heading color={type === 'primary' ? 'inverted' : 'primary'}>
+    <Heading color={type === "primary" ? "inverted" : "primary"}>
       {children}
     </Heading>
     {addons && addons.append}
   </button>
-)
+);
 
 Button.propTypes = {
   children: PropTypes.string.isRequired,
@@ -42,13 +42,13 @@ Button.propTypes = {
   onClick: PropTypes.func,
   isInline: PropTypes.bool,
   isMuted: PropTypes.bool,
-}
+};
 
 Button.defaultProps = {
-  type: 'primary',
+  type: "primary",
   getStyles: () => {},
   onClick: () => {},
   isInline: false,
-}
+};
 
-export default withStyles(styles)(Button)
+export default withStyles(styles)(Button);

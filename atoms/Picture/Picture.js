@@ -1,8 +1,8 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from "react";
+import PropTypes from "prop-types";
 
-import styles from './Picture.module.css'
-import withStyles from '../../hocs/withStyles'
+import styles from "./Picture.module.css";
+import withStyles from "../../hocs/withStyles";
 
 export const Picture = ({
   getStyles,
@@ -13,14 +13,14 @@ export const Picture = ({
   withBorder,
 }) => (
   <picture
-    className={getStyles('picture', {
-      'is-rounded': isRounded,
-      'with-border': withBorder,
+    className={getStyles("picture", {
+      "is-rounded": isRounded,
+      "with-border": withBorder,
     })}
   >
     <img src={src} style={{ height, maxWidth: width }} />
   </picture>
-)
+);
 
 Picture.propTypes = {
   src: PropTypes.string.isRequired,
@@ -29,12 +29,12 @@ Picture.propTypes = {
   height: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   isRounded: PropTypes.bool,
   withBorder: PropTypes.bool,
-}
+};
 
 Picture.defaultProps = {
-  height: 'auto',
+  height: "auto",
   withBorder: false,
   getStyles: () => {},
-}
+};
 
-export default withStyles(styles)(Picture)
+export default withStyles(styles)(Picture);

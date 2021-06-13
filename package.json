@@ -1,12 +1,12 @@
 {
-  "name": "@glrodasz/components",
-  "version": "1.12.0",
+  "name": "@davidgranados/components",
+  "version": "1.13.0",
   "description": "A components library to create apps from zero to production",
   "private": false,
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/glrodasz/cero-components.git"
+    "url": "https://github.com/davidgranados/cero-components.git"
   },
   "engines": {
     "node": ">=15.0.0",
